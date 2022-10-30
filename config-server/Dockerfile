@@ -3,7 +3,7 @@ FROM openjdk:20-jdk-buster as builder
 ADD . /opt/
 WORKDIR /opt/
 
-RUN ./gradlew clean build && ls /opt
+RUN gradle clean build  --no-daemon
 
 FROM openjdk:19 as runner
 
