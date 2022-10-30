@@ -18,6 +18,10 @@ repositories {
     mavenCentral()
 }
 
+bootJar {
+    archiveFileName = "app.jar"
+}
+
 dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     compileOnly 'org.projectlombok:lombok'
