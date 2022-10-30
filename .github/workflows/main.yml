@@ -39,7 +39,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
   core:
-    name: Build and Push Core
+    name: Build and push core service
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo

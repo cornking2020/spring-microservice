@@ -1,9 +1,9 @@
-FROM openjdk:19 as builder
+FROM gradle:jdk17 as builder
 
 ADD . /opt/
 WORKDIR /opt/
 
-RUN ./gradlew clean build
+RUN gradle clean build
 
 FROM openjdk:19 as runner
 
