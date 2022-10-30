@@ -1,6 +1,6 @@
 FROM gradle:jdk17 as builder
 
-ADD ./spring-core/ /opt/
+ADD . /opt/
 WORKDIR /opt/
 
 RUN gradle clean build

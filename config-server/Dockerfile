@@ -1,9 +1,9 @@
 FROM gradle:jdk17 as builder
 
-ADD ./config-server/ /opt/
+ADD . /opt/
 WORKDIR /opt/
 
-RUN gradle clean build && ls /opt
+RUN ls /opt && gradle clean build
 
 FROM openjdk:19 as runner
 
