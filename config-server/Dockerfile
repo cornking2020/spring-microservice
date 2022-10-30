@@ -1,4 +1,4 @@
-FROM openjdk:20-jdk-buster as builder
+FROM gradle:jdk17 as builder
 
 ADD . /opt/
 WORKDIR /opt/
