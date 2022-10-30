@@ -1,6 +1,6 @@
 FROM gradle:jdk17 as builder
 
-ADD . /opt/
+ADD ./config-server/ /opt/
 WORKDIR /opt/
 
 RUN gradle clean build && ls /opt
