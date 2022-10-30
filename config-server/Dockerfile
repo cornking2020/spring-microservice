@@ -3,7 +3,7 @@ FROM gradle:jdk17 as builder
 ADD . /opt/
 WORKDIR /opt/
 
-RUN gradle clean build
+RUN gradle clean build && ls /opt
 
 FROM openjdk:19 as runner
 
